@@ -3,6 +3,11 @@ require('sinatra/contrib/all')
 
 require_relative('./models/game.rb')
 
+
+get '/' do
+  erb(:home)
+end
+
 get '/play/:thing1/:thing2' do
   thing1 = params[:thing1]
   thing2 = params[:thing2]
